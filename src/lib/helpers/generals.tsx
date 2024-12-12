@@ -119,7 +119,7 @@ export const calcMinuteHeight = (cellHeight: number, step: number) => {
 };
 
 export const calcCellHeight = (tableHeight: number, hoursLength: number) => {
-  return Math.max(tableHeight / hoursLength, 60);
+  return Math.max(tableHeight / hoursLength, 22);
 };
 
 export const differenceInDaysOmitTime = (start: Date, end: Date) => {
