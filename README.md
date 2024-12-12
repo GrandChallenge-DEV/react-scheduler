@@ -5,10 +5,10 @@
 
 > :warning: **Notice**: This component uses `mui`/`emotion`/`date-fns`. if your project is not already using these libs, this component may not be suitable.
 
-## Installation
+## Installation: This is fork version of GC
 
 ```jsx
-npm i @aldabil/react-scheduler
+npm i aldabil-gc-react-scheduler
 ```
 
 If you plan to use `recurring` events in your scheduler, install `rrule` [package](https://www.npmjs.com/package/rrule)
