@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "2.9.5",
+  "version": "2.9.7",
   "description": "React scheduler component based on Material-UI & date-fns",
   "files": [
     "*"

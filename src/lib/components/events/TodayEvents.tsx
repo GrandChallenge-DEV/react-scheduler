@@ -51,7 +51,8 @@ const TodayEvents = ({
 
         const topSpace = minituesFromTop * minuteHeight;
         /** Add border factor to height of each slot */
-        const slots = height / 60;
+        // const slots = height / 60;
+        const slots = differenceInMinutes(event.end, event.start) / step;
         const heightBorderFactor = slots * BORDER_HEIGHT;
 
         /** Calculate top space */
@@ -61,7 +62,6 @@ const TodayEvents = ({
         const crossingEvents = traversCrossingEvents(todayEvents, event);
         const alreadyRendered = crossingEvents.filter((e) => crossingIds.includes(e.event_id));
         crossingIds.push(event.event_id);
-
         return (
           <div
             key={`${event.event_id}/${event.recurrenceId || ""}`}
@@ -72,7 +72,7 @@ const TodayEvents = ({
               width:
                 alreadyRendered.length > 0
                   ? `calc(100% - ${100 - 98 / (alreadyRendered.length + 1)}%)`
-                  : "98%", // Leave some space to click cell
+                  : "100%", // Leave some space to click cell
               zIndex: todayEvents.length + i,
               [direction === "rtl" ? "right" : "left"]:
                 alreadyRendered.length > 0
